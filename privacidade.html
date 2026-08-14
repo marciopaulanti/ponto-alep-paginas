@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — Ponto ALEP · Saldo de Horas</title>
+<style>
+  body { font: 15px/1.6 -apple-system, "Segoe UI", Arial, sans-serif; color: #1c2733; max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  .data { color: #7c8a9a; font-size: 13px; margin-bottom: 32px; }
+  h2 { font-size: 16px; margin-top: 32px; color: #12233a; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e0e5ea; vertical-align: top; }
+  th { color: #5b6b7a; font-weight: 600; background: #f6f8fa; }
+  code { background: #f0f2f5; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+  a { color: #1e3a5f; }
+</style>
+</head>
+<body>
+  <h1>Política de Privacidade</h1>
+  <p class="data">Ponto ALEP — Saldo de Horas · última atualização: agosto de 2026</p>
+
+  <p>Esta extensão para Google Chrome calcula, direto na página de Consulta de Marcações de Ponto
+  do Portal RH da Assembleia Legislativa do Paraná, o saldo de horas do usuário (Horas Mês, Horas
+  Necessárias, Horas Trabalhadas e Saldo). Esta página explica quais dados a extensão usa, para quê,
+  e como eles são tratados.</p>
+
+  <h2>Quais dados a extensão coleta</h2>
+  <table>
+    <tr><th>Dado</th><th>Quando</th><th>Para quê</th><th>Onde fica</th></tr>
+    <tr>
+      <td>Tabela de marcações de ponto (datas, horários, ocorrências)</td>
+      <td>Sempre que a página de Consulta de Ponto é aberta</td>
+      <td>Calcular o saldo de horas — processamento 100% local, no navegador</td>
+      <td>Nunca sai do navegador do usuário</td>
+    </tr>
+    <tr>
+      <td>Nome e e-mail</td>
+      <td>Somente se o usuário usar "Solicitar uma licença" dentro da extensão</td>
+      <td>Gerar e enviar por e-mail a chave de acesso da extensão</td>
+      <td>Backend próprio (Supabase), usado só para emitir/validar a licença</td>
+    </tr>
+    <tr>
+      <td>Identificador de dispositivo (gerado aleatoriamente, ex.: <code>dev-xxxx-xxxx</code>)</td>
+      <td>Na ativação da licença</td>
+      <td>Controlar em qual computador a licença está ativa (1 computador por vez)</td>
+      <td>Backend próprio (Supabase)</td>
+    </tr>
+    <tr>
+      <td>Configurações e exceções cadastradas (jornada diária, feriados editados, recessos, expedientes especiais)</td>
+      <td>Quando o usuário cadastra ou altera algo no painel</td>
+      <td>Lembrar as preferências do usuário entre sessões</td>
+      <td>Somente <code>chrome.storage.local</code>, no próprio navegador</td>
+    </tr>
+  </table>
+
+  <h2>O que a extensão NUNCA faz</h2>
+  <p>Não vende, não compartilha e não transfere dados para terceiros fora do necessário para a
+  extensão funcionar. Não usa os dados para publicidade, para determinar crédito/empréstimo, nem
+  para qualquer finalidade fora do propósito único descrito acima. Não lê e-mails, histórico de
+  navegação, localização ou qualquer conteúdo fora da página de Consulta de Marcações de Ponto do
+  Portal RH.</p>
+
+  <h2>Serviços externos usados</h2>
+  <table>
+    <tr><th>Serviço</th><th>Finalidade</th></tr>
+    <tr><td>BrasilAPI e FeriadosAPI</td><td>Buscar a lista pública de feriados nacionais, estaduais e municipais. Nenhum dado do usuário é enviado.</td></tr>
+    <tr><td>Supabase (backend próprio)</td><td>Emitir e validar a chave de licença, conforme a tabela acima.</td></tr>
+  </table>
+
+  <h2>Código remoto</h2>
+  <p>A extensão não executa código remoto. Todo o código roda a partir dos arquivos empacotados
+  (Manifest V3); as chamadas de rede retornam apenas dados em JSON.</p>
+
+  <h2>Contato</h2>
+  <p>Dúvidas ou pedido de exclusão de dados: <a href="mailto:paulanti.marcio@gmail.com">paulanti.marcio@gmail.com</a></p>
+</body>
+</html>

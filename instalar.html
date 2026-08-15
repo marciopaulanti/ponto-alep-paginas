@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ponto ALEP — Saldo de Horas (projeto pessoal)</title>
+
+<!-- Open Graph: o que WhatsApp, Telegram etc. leem pra montar o preview -->
+<meta property="og:title" content="Ponto ALEP — Saldo de Horas (projeto pessoal)" />
+<meta property="og:description" content="Projeto pessoal de um colega da Casa: calcula seu saldo de horas automaticamente na Consulta de Ponto. Não é oficial, só facilita o dia a dia. 🕐✅" />
+<meta property="og:image" content="https://marciopaulanti.github.io/ponto-alep-paginas/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://marciopaulanti.github.io/ponto-alep-paginas/instalar.html" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ponto ALEP — Saldo de Horas (projeto pessoal)" />
+<meta name="twitter:description" content="Calcula seu saldo de horas automaticamente na Consulta de Ponto. Projeto pessoal, não oficial." />
+<meta name="twitter:image" content="https://marciopaulanti.github.io/ponto-alep-paginas/og-image.png" />
+
+<!-- redireciona sozinho depois de alguns segundos; crawlers (WhatsApp etc.)
+     não executam isso, só leem as tags acima -->
+<meta http-equiv="refresh" content="6; url=https://chromewebstore.google.com/detail/ponto-alep-%E2%80%94-saldo-de-hor/hakbclhdmmimckepmloadhhllonnhknb?hl=pt-BR&utm_source=landing_whatsapp">
+
+<style>
+  :root {
+    --navy-900:#0a1522; --navy-700:#1e3a5f; --navy-500:#2f5788;
+    --green-700:#0f5c27; --green-ok:#2fa060; --text:#e8edf3; --muted:#a9bad0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--navy-500), var(--navy-900));
+    font: 16px/1.65 -apple-system, "Segoe UI", Poppins, Arial, sans-serif;
+    color: var(--text); padding: 32px 16px;
+  }
+  .card {
+    max-width: 560px; width: 100%; background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.12); border-radius: 20px; overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  }
+  .card img { display: block; width: 100%; height: auto; }
+  .card-body { padding: 28px 30px 32px; }
+  .badge {
+    display: inline-block; background: rgba(47,160,96,.18); color: #b9f0cf;
+    border: 1px solid rgba(47,160,96,.4); font-size: 12.5px; font-weight: 700;
+    letter-spacing: .4px; padding: 5px 12px; border-radius: 999px; margin-bottom: 16px;
+  }
+  h1 { font-size: 21px; margin: 0 0 6px; color: #fff; }
+  p { color: var(--muted); margin: 0 0 14px; font-size: 15px; }
+  p.saud { color: var(--text); font-size: 16px; }
+  .btn {
+    display: block; text-align: center; margin-top: 22px; padding: 14px 20px;
+    background: linear-gradient(90deg, var(--green-ok), var(--green-700));
+    color: #fff; text-decoration: none; font-weight: 700; border-radius: 12px;
+    font-size: 15.5px; box-shadow: 0 6px 18px rgba(15,92,39,.4);
+  }
+  .fine { text-align: center; font-size: 12px; color: #7c8a9a; margin-top: 16px; }
+  .fine a { color: #9db3c9; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <img src="og-image.png" alt="Ponto ALEP — Saldo de Horas">
+    <div class="card-body">
+      <span class="badge">PROJETO PESSOAL · NÃO OFICIAL</span>
+      <h1>Fala, amigo servidor, comissionado ou efetivo! 👋</h1>
+      <p class="saud">Esse é um projetinho de hobby — feito nas horas vagas por um colega da Casa
+      que curte programação e engenharia de software. Não é nada oficial da ALEP, não substitui
+      nenhum sistema e não tem a menor pretensão de tomar o lugar de nada que já existe por aqui.</p>
+      <p>A ideia é simples: pegar aquele saldo de horas que a gente sempre precisa calcular na mão
+      e deixar automático — direto na tela de Consulta de Ponto, sem planilha e sem conta de cabeça.</p>
+      <p>É de graça, o código é aberto, e qualquer sugestão é bem-vinda.</p>
+      <a class="btn" href="https://chromewebstore.google.com/detail/ponto-alep-%E2%80%94-saldo-de-hor/hakbclhdmmimckepmloadhhllonnhknb?hl=pt-BR&utm_source=landing_whatsapp">
+        Instalar na Chrome Web Store →
+      </a>
+      <p class="fine">Você será redirecionado automaticamente em alguns segundos.<br>
+      Extensão desenvolvida de forma independente, sem vínculo oficial com a ALEP.</p>
+    </div>
+  </div>
+</body>
+</html>
